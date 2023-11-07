@@ -25,7 +25,9 @@ header {
     justify-content: space-between;
 
     .logo {
-        width: 5em;
+        width: 6em;
+        height: 2em;
+        object-fit: contain;
     }
     .menu {
         cursor: pointer;
@@ -135,6 +137,19 @@ nav {
         font-size: 1rem;
         padding: .6em 1.2em;
         cursor: pointer;
+        margin-bottom: 8rem;
+    }
+}
+
+.footer {
+    text-align: center;
+    background: white;
+
+    p {
+        padding: 1.5em;
+        color: gray;
+        font-size: .9rem;
+        letter-spacing: .1em;
     }
 }
 
@@ -164,7 +179,7 @@ nav {
 
             li a {
                 padding: .5em 1.5em;
-                font-size: .9rem;
+                font-size: 1.2rem;
             }
         }
     }
@@ -176,6 +191,6 @@ nav {
     }
 
     .contact {
-        padding: 0 16rem;
+        padding: 0 22rem;
     }
 }

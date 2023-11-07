@@ -23,7 +23,10 @@ header {
   justify-content: space-between;
 }
 header .logo {
-  width: 5em;
+  width: 6em;
+  height: 2em;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 header .menu {
   cursor: pointer;
@@ -119,6 +122,18 @@ nav .close {
   font-size: 1rem;
   padding: 0.6em 1.2em;
   cursor: pointer;
+  margin-bottom: 8rem;
+}
+
+.footer {
+  text-align: center;
+  background: white;
+}
+.footer p {
+  padding: 1.5em;
+  color: gray;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
 }
 
 .open-nav {
@@ -145,12 +160,12 @@ nav .close {
   }
   nav ul li a {
     padding: 0.5em 1.5em;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
   .hero p {
     padding: 0 10rem;
   }
   .contact {
-    padding: 0 16rem;
+    padding: 0 22rem;
   }
 }/*# sourceMappingURL=main.css.map */
