@@ -10,7 +10,71 @@
     <div class="navbar">
         <header>
             <img src="img/black-logo.png" alt="" class="logo">
+
+            <nav>
+                <img src="img/x.svg" alt="" class="close">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="img/menu.svg" alt="" class="menu">
         </header>
     </div>
+    <section class="hero">
+        <div class="container">
+            <h1>Hi, I'm Natan Mesele!</h1>
+            <p>Hello! I'm Khalid Mohammed, a Full-Stack web developer. I am 11 years old and a grade 4 student. I have a big interest in computer science. My dream is to be a computer scientist and a university professor (on computer science). I have attended full-stack development courses at Udemy and Evangadi Bootcamps. To further strengthen my future web development studies, I joined Coursera Inc. which is a U.S.-based massive open online course provider. I am a hardworking, honest, and willing to learn new skills.</p>
+            <p>I'm happy to connect, listen and help. Let's work together and build something awesome. Let's turn your idea to an even greater product.</p>
+        </div>
+    </section>
+    <section class="portfolio">
+        <div class="container">
+            <h2>Recent works</h2>
+            <ul class="portfolio-list">
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+                <li>
+                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+        const nav = document.querySelector('nav')
+
+        menu.addEventListener('click', () => {
+            nav.classList.add('open-nav')
+        })
+
+        close.addEventListener('click', () => {
+            nav.classList.remove('open-nav')
+        })
+    </script>
 </body>
 </html>
