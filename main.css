@@ -113,6 +113,11 @@ nav .close {
 }
 .portfolio .portfolio-list .image-container .overlay-content {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Horizontally center align items */
+  align-items: center;
+  gap: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -123,6 +128,9 @@ nav .close {
   font-size: 1.2rem;
   color: black;
   text-decoration: none;
+  flex-shrink: -1; /* Prevent image from shrinking */
+  margin-right: 10px;
+  text-align: left;
 }
 .portfolio .portfolio-list .image-container:hover .overlay {
   opacity: 1;
