@@ -91,6 +91,8 @@ nav .close {
 .portfolio .portfolio-list .image-container {
   position: relative;
   display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 .portfolio .portfolio-list .image-container .image {
   display: block;
