@@ -8,7 +8,7 @@
     <link rel="icon" href="img/fav.png" type="image/x-icon">
 </head>
 <body>
-    <div class="navbar">
+    <div id="navbar" class="navbar">
         <header>
             <img src="img/black-logo.png" alt="" class="logo">
 
@@ -23,7 +23,7 @@
         </header>
     </div>
     <section class="hero">
-        <div class="container">
+        <div class="container reveal">
             <h1>Hi, I'm Natan Mesele!</h1>
             <p>Hello! I'm Natan Mesele, a Full-Stack web developer. I am 28 years old. I have a big interest in computer science. My dream is to be a computer scientist and a university professor (on computer science). I have attended full-stack development courses at Udemy and Evangadi Bootcamps. To further strengthen my future web development studies, I joined Coursera Inc. which is a U.S.-based massive open online course provider. I am a hardworking, honest, and willing to learn new skills.</p>
             <p>What I love most about being a full stack web developer is the dynamic nature of the field. The ever-evolving technologies and frameworks keep me motivated to continuously learn and enhance my skills. I actively engage in online communities, attend web development conferences, and pursue personal projects to stay updated with the latest industry trends. By combining my passion for development with a growth mindset, I aim to deliver cutting-edge solutions that push the boundaries of what's possible in the digital realm</p>
@@ -32,7 +32,7 @@
         </div>
     </section>
     <section class="portfolio">
-        <div class="container">
+        <div class="container reveal">
             <h2>Recent works</h2>
             <ul class="portfolio-list">
                 <li>
@@ -51,7 +51,7 @@
                     <a href="#"><img src="img/tesla.jpg" alt=""></a> 
                 </li>
                 <li>
-                    <a href="#"><img src="img/apple.png" alt=""></a> 
+                    <a href="#"><img src="img/linkp.jpg" alt=""></a> 
                 </li>
                 <li>
                     <a href="#"><img src="img/apple.png" alt=""></a> 
@@ -70,6 +70,7 @@
             <p>Copyright ©2023 An IT solution. All rights reserved | This website is made by Natan Mesele</p>
         </div>
     </section>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn"><img src="img/arrow-up.svg" alt=""></button>
     <script>
         const menu = document.querySelector('.menu')
         const close = document.querySelector('.close')
@@ -82,6 +83,43 @@
         close.addEventListener('click', () => {
             nav.classList.remove('open-nav')
         })
+
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+
+        var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 100) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+            });
+
+            scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
     </script>
 </body>
 </html>
